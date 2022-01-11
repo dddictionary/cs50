@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jan 10 21:56:11 2022
+# Make data base, printed on Tue Jan 11 18:07:33 2022
 
 # Variables
 
@@ -57,7 +57,7 @@ PATH = /home/abrar/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/b
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-82a96c23-26c5-4cdf-b946-c3170d904359.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-86d398b1-9b97-42fc-b603-508efc4f5909.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -71,7 +71,7 @@ PWD = /home/abrar/cs50
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/5628_interop
+WSL_INTEROP = /run/WSL/162_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
@@ -148,8 +148,10 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=4/90=4%
+# Load=69/1024=7%, Rehash=0, Collisions=4/91=4%
 
 # Pattern-specific Variable Values
 
@@ -215,6 +217,6 @@ GNUmakefile:
 # strcache performance: lookups = 33 / hit rate = 9%
 # hash-table stats:
 # Load=30/8192=0%, Rehash=0, Collisions=1/33=3%
-# Finished Make data base on Mon Jan 10 21:56:11 2022
+# Finished Make data base on Tue Jan 11 18:07:33 2022
 
  
