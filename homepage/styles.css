@@ -1,0 +1,22 @@
+body
+{
+    background-color: dodgerblue;
+}
+
+#greetings, hr
+{
+    color:rgb(10, 2, 2);
+    text-align: center;
+}
+
+
+
+
+.image1
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+

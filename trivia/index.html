@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+
+                //multiple choice
+                let correct = document.querySelector('.correct');
+                let incorrect = document.querySelectorAll('.incorrect');
+
+                correct.addEventListener('click', function (){
+                    correct.style.backgroundColor = 'green';
+                    document.getElementById('feedback').innerText = 'Correct!';
+                });
+
+                for (let i = 0; i < incorrect.length; i++){
+                    incorrect[i].addEventListener('click', function (){
+                    incorrect[i].style.backgroundColor = 'red';
+                    document.getElementById('feedback').innerText = 'Incorrect!';
+                    })
+                };
+
+                //short answer
+                document.querySelector('#Check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value === 'New York City'){
+                        input.style.backgroundColor = 'green';
+                        document.getElementById('feedback2').innerText = "Correct!";
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.getElementById('feedback2').innerText = "Incorrect!";
+                    }
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>
+                    What is the largest black hole ever measured?
+                </h3>
+                <button class="correct">66 Billion Solar Masses</button>
+                <button class="incorrect">5 Million Solar Masses</button>
+                <button class="incorrect">93 Trillion Solar Masses</button>
+                <button class="incorrect">13 Thousand Solar Masses</button>
+                <p id = 'feedback'></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                Which city has the largest population density per capita in the United States?
+                </h3>
+                <input type = "text">
+                <button id='Check'>Check Answer</button>
+                <p id = 'feedback2'></p>
+
+            </div>
+        </div>
+    </body>
+</html>

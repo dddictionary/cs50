@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It was the fastest to go through the sorted lists. Bubble sort is able to check if lists are sorted faster than Selection Sort
+
+sort2 uses: Merge Sort
+
+How do you know?: It was always the fastest to sort through the numbers.  
+
+sort3 uses: Selection Sort
+
+How do you know?: It took pretty much the same time checking sorted lists and reversed lists. 
