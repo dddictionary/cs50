@@ -1,22 +1,19 @@
 body
 {
-    background-color: dodgerblue;
+    margin: 0;
+    background-image: url("https://cdn.discordapp.com/attachments/798117295258992650/931313179093504091/Your_Name_4K_Wallpaper_Galore_in_2020_Kimi_no_na_wa_wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-#greetings, hr
+#welcome
 {
-    color:rgb(10, 2, 2);
-    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: azure;
+    font-family: sans-serif;
+    
 }
-
-
-
-
-.image1
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
