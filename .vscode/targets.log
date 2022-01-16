@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jan 15 16:47:10 2022
+# Make data base, printed on Sun Jan 16 17:31:51 2022
 
 # Variables
 
@@ -57,7 +57,7 @@ PATH = /home/abrar/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/b
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-1476a29c-d70b-4a49-896a-113311ea92a0.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-2176d08a-8e50-4430-ba1a-885afda9a4b2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -71,7 +71,7 @@ PWD = /home/abrar/cs50
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/162_interop
+WSL_INTEROP = /run/WSL/3206_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
@@ -215,6 +215,6 @@ GNUmakefile:
 # strcache performance: lookups = 33 / hit rate = 9%
 # hash-table stats:
 # Load=30/8192=0%, Rehash=0, Collisions=1/33=3%
-# Finished Make data base on Sat Jan 15 16:47:10 2022
+# Finished Make data base on Sun Jan 16 17:31:51 2022
 
  
