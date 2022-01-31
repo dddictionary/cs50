@@ -8,10 +8,12 @@ body{
     min-height: 100vh;
 }
 
-.intro{
-    text-align: left;
-    color: white;
-    margin-top: 10%;
-    border: 1px solid;
-    border-color: rgb(139, 87, 18);
+#title{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+div.intro{
+    color: white;
+}
+
