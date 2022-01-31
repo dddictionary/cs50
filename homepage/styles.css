@@ -1,21 +1,11 @@
 body
 {
     margin: 0;
-    background-image: url("https://cdn.discordapp.com/attachments/798117295258992650/931313179093504091/Your_Name_4K_Wallpaper_Galore_in_2020_Kimi_no_na_wa_wallpaper.jpg");
+    background-image: url("images/main-page.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
-
-#welcome
-{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    color: rgb(128, 228, 228);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: black;
 }
 
 .mainbtn

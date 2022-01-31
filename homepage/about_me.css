@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-image: url(images/main-page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.intro{
+    text-align: left;
+    color: white;
+    margin-top: 10%;
+    border: 1px solid;
+    border-color: rgb(139, 87, 18);
+}
