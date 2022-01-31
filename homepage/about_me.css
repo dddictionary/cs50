@@ -13,7 +13,12 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
-div.intro{
+.intro{
     color: white;
 }
 
+#snow{
+    padding: 0;
+    border: 50px solid transparent;
+    margin: 0;
+}
