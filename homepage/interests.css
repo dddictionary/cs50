@@ -17,6 +17,7 @@ body{
     background:rgb(0, 3, 170);
     opacity:0;
     transition:opacity 500ms ease-in-out;
+    overflow: hidden;
 }
   .img-container:hover .overlay{
     opacity:1;
@@ -29,6 +30,8 @@ body{
     color:#fff;
 }
 
-.marquee{
-    overflow: hidden;
+.para{
+    clear: both;
+    float: left;
+    white-space: nowrap;
 }
