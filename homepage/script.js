@@ -7,8 +7,8 @@ animate(para2);
 animate(para3);
 
 function animate(element){
-    let elementWidth = element.offsetWidth;
-    let parentWidth = element.parentElement.offsetWidth;
+    let elementWidth = element.elementWidth
+    let parentWidth = element.parentElement.elementWidth;
     let flag = 0;
     
     setInterval(() => {

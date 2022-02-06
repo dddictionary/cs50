@@ -6,48 +6,31 @@
         <link href="interests.css" rel="stylesheet">
         <script src="script.js"></script>
         <title>Interests</title>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+          $(function(){
+            $("#includedContent").load("navbar.html")
+          })
+        </script>
     </head>
     <body class= "d-flex flex-column">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-            aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="about_me.html">About Me<span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="ec.html">Extracirriculuars<span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="interests.html">Interests<span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/dddictionary">Github</a>
-              </li>
-            </ul>
-            </div>
-        </nav>
+      <div id="includedContent"></div>
         <div class="img-container">
             <img src="images/u9skwca8.bmp" width="100%">
-            <div class="overlay">
-                <span class="para" id="para1">I have begun to learn more about Cryptography</span>
+            <div class="overlay" background="rgb(0,0,0)">
+                <span class="para" id="para1">I started to learn more about Cryptography and cybersecurity through puzzles and other fun stuff!</span>
             </div>
         </div>
         <div class="img-container">
           <img src="images/vpython-example.png" width="100%">
           <div class="overlay">
-              <span class="para" id="para1">I have begun to learn more about Cryptography</span>
+              <span class="para" id="para2">I learned more about python through coding in a physics engine and building a Solar System.</span>
           </div>
       </div>
       <div class="img-container">
         <img src="images/08mh74kt.bmp" width="100%">
         <div class="overlay">
-            <span class="para" id="para1">I have begun to learn more about Cryptography</span>
+            <span class="para" id="para3">I love math and physics and want to combine this love with my skills in Programming. </span>
         </div>
     </div>
     </body>
