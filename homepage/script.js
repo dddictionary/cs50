@@ -1,13 +1,11 @@
-import anime from 'animejs/lib/anime.es.js'
+import anime from "./node_modules/animejs/lib/anime.es.js"
 
-let welcome = document.querySelector('#welcome')
 
-anime({
-    targets: welcome,
-    translateX: 250,
-    rotate: '1turn',
-    backgroundColor: '#FFF',
-    duration: 800
+let animation = anime({
+    targets: 'div.welcome',
+    translateX: 100,
+    borderRadius: 50,
+    duration: 1000,
+    easing: 'linear',
+    direction: 'alternate'
   });
-
-
