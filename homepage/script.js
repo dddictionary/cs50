@@ -5,7 +5,7 @@ import anime from "./node_modules/animejs/lib/anime.es.js"
 var textWrapper = document.querySelector('.ml11 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true })
+let myanime = anime.timeline({autoplay:false })
   .add({
     targets: '.ml11 .line',
     scaleY: [0,1],
@@ -26,10 +26,6 @@ anime.timeline({loop: true })
     duration: 600,
     offset: '-=775',
     delay: (el, i) => 34 * (i+1)
-  }).add({
-    targets: '.ml11',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
   });
+
+myanime.play();
