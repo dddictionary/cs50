@@ -1,5 +1,3 @@
-import os
-
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
@@ -27,16 +25,22 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-        name = db.execute("INSERT INTO birthdays (name)", request.form.get("name"))
-        month = db.execute("INSERT INTO birthdays (month)", request.form.get("month"))
-        year = db.execute("INSERT INTO birthdays (year)",request.form.get("year"))
+        message = ""
+        name = request.form.get("name")
+        month = request.form.get("month")
+        day = request.form.get("day")
+        if not name and not month and not day:
+            message += "Missing required fields!!"
+        else: 
+            db.execute("INSERT INTO birthdays (name,month,day) VALUES(?,?,?)", name, month, day,)
         
-        return redirect("/")
+        birthdays = db.execute("SELECT * from birthdays")
+        return render_template("index.html", message=message, birthdays=birthdays)
 
     else:
 
         # TODO: Display the entries in the database on index.html
-
-        return render_template("index.html", name=name,month=month,year=year)
+        birthdays = db.execute("SELECT * from birthdays")
+        return render_template("index.html", birthdays=birthdays)
 
 

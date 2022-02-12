@@ -12,13 +12,16 @@
         </div>
         <div class="container">
             <div class="section">
+                <div class="error_message">
+                    {{message}}
+                </div>
 
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form action="/" name="birthday" method="POST" >
-                    <input type="text" autocomplete="off" autofocus name="Name" placeholder="Name">
-                    <input type="text" name="Month" placeholder="Month">
-                    <input type="text" name="Year" placeholder="Year">
+                    <input type="text" autocomplete="off" autofocus name="name" placeholder="Name">
+                    <input type="text" autocomplete="off" name="month" placeholder="Month">
+                    <input type="text" autocomplete="off" name="day" placeholder="Day">
                     <input type="submit" value="Add Birthday">
                 </form>
             </div>
@@ -35,7 +38,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        
+                        {% for birthday in birthdays%}
+                            <tr>
+                                <td>{{birthday.name}}</td>
+                                <td>{{birthday.month}}/{{birthday.day}}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

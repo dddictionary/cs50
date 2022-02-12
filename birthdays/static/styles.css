@@ -81,3 +81,7 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
+.error_message{
+    color: red;
+    size: 1.5em;
+}
