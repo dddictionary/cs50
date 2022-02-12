@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jan 22 14:08:42 2022
+# Make data base, printed on Fri Feb 11 21:34:29 2022
 
 # Variables
 
@@ -15,13 +17,13 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # environment
-VSCODE_AGENT_FOLDER = /home/abrar/.vscode-server
-# environment
 VSCODE_LOG_NATIVE = false
+# environment
+NVM_INC = /home/abrar/.nvm/versions/node/v16.13.2/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -35,27 +37,27 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/abrar/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/node
+_ = /mnt/d/Microsoft VS Code/bin/code
 # makefile
 MAKEFILE_LIST := 
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
-# environment
 VSCODE_VERBOSE_LOGGING = true
-# environment
-LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /mnt/d/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/abrar/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/d/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/GtkSharp/2.12/bin:/mnt/c/ffmpeg:/mnt/c/Users/Abrar Habib/AppData/Roaming/Python/Python39/Scripts:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/d/Strawberry/c/bin:/mnt/d/Strawberry/perl/site/bin:/mnt/d/Strawberry/perl/bin:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/Abrar Habib/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Abrar Habib/AppData/Roaming/npm:/mnt/d/Microsoft VS Code/bin:/mnt/d/PyCharm Community Edition 2021.2/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/Abrar Habib/AppData/Local/GitHubDesktop/bin:/mnt/d/Program Files/JetBrains/CLion 2021.3.2/bin:/snap/bin
+PATH = /home/abrar/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/remote-cli:/home/abrar/.nvm/versions/node/v16.13.2/bin:/home/abrar/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/d/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/GtkSharp/2.12/bin:/mnt/c/ffmpeg:/mnt/c/Users/Abrar Habib/AppData/Roaming/Python/Python39/Scripts:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/d/Strawberry/c/bin:/mnt/d/Strawberry/perl/site/bin:/mnt/d/Strawberry/perl/bin:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/Abrar Habib/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Abrar Habib/AppData/Roaming/npm:/mnt/d/Microsoft VS Code/bin:/mnt/d/PyCharm Community Edition 2021.2/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/Abrar Habib/AppData/Local/GitHubDesktop/bin:/mnt/d/Program Files/JetBrains/CLion 2021.3.2/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+NVM_BIN = /home/abrar/.nvm/versions/node/v16.13.2/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-92a8c6ea-90f2-41ec-9302-84651701efaa.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0be0bb3b-eae6-41d9-812f-96216cd8bbe7.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,17 +71,21 @@ PWD = /home/abrar/cs50
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/130_interop
+WSL_INTEROP = /run/WSL/7405_interop
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+WT_SESSION = 8a6f8e17-fa7b-4dfa-9ddd-4ac2758bc922
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
 HOME = /home/abrar
 # environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
-# environment
 LOGNAME = abrar
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+NVM_CD_FLAGS = -q
+# environment
+ZSH = /home/abrar/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -91,7 +97,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -99,13 +105,17 @@ USER = abrar
 # makefile
 .DEFAULT_GOAL := 
 # environment
-NAME = DESKTOP-5Q81G7S
+NAME = Code
+# environment
+LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Abrar Habib/.vscode/extensions/ms-vscode-remote.remote-wsl-0.63.13
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Abrar Habib/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/d/Microsoft VS Code
 # default
 .VARIABLES := 
 # automatic
@@ -116,14 +126,20 @@ MAKEFLAGS = pqrR
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /home/abrar/.nvm
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
+# environment
+WT_PROFILE_ID = {2c4de342-38b7-51cf-b940-2309a097f518}
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# environment
+PAGER = less
 # environment
 LC_ALL = C
 # environment
@@ -134,8 +150,6 @@ HOSTTYPE = x86_64
 SUFFIXES := 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/abrar/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/remote/node_modules
 # default
 .RECIPEPREFIX := 
 # environment
@@ -147,7 +161,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=4/90=4%
+# Load=74/1024=7%, Rehash=0, Collisions=4/96=4%
 
 # Pattern-specific Variable Values
 
@@ -213,8 +227,6 @@ GNUmakefile:
 # strcache performance: lookups = 34 / hit rate = 8%
 # hash-table stats:
 # Load=31/8192=0%, Rehash=0, Collisions=1/34=3%
-# Finished Make data base on Sat Jan 22 14:08:42 2022
+# Finished Make data base on Fri Feb 11 21:34:29 2022
 
- 
-make: *** No rule to make target 'all'.  Stop.
  
