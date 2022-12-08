@@ -5,7 +5,8 @@
 #include <sys/resource.h>
 #include <sys/time.h>
 
-#include "dictionary.h"
+#include "dictionary.h" //me 
+
 
 // Undefine any definitions
 #undef calculate
