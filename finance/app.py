@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+# from dotenv import load_dotenv
 
 from helpers import apology, login_required, lookup, usd
 
@@ -26,7 +27,8 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
-if not os.getenv("API_KEY"):
+# load_dotenv()
+if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
@@ -50,7 +52,27 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "GET":
+        return render_template("buy.html")
+    
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        res = lookup(symbol)
+        
+        #Result can return None. Handle it here.
+        if not res:
+            return apology("Invalid symbol!", 400)
+        
+        #If shares is negative, thats not possible
+        if shares < 0:
+            return apology("Invalid number of shares!", 400)
+
+        
+
+        
+
+    # return apology("TODO")
 
 
 @app.route("/history")
@@ -115,14 +137,15 @@ def quote():
         return render_template("quote.html")
     
     #Look up symbol
-    symbol = request.form.get("symbol")
-    res = lookup(symbol)
-    
-    #Result can return None. Handle it here.
-    if not res:
-        return apology("Invalid symbol!", 400)
-    #If result found, render the template with new information
-    return render_template("quoted.html", name=res["name"],price=usd(res["price"]),symbol=res["symbol"])
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        res = lookup(symbol)
+        
+        #Result can return None. Handle it here.
+        if not res:
+            return apology("Invalid symbol!", 400)
+        #If result found, render the template with new information
+        return render_template("quoted.html", name=res["name"],price=usd(res["price"]),symbol=res["symbol"])
     
 
 
@@ -133,24 +156,26 @@ def register():
         return render_template("register.html")
     
     #Get username and password to enter into 
-    username = request.form.get("username")
-    password = request.form.get("password")
-    confirm = request.form.get("confirm")
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirm = request.form.get("confirm")
 
-    if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
-        return apology("Invalid username. Please try again!")
+        if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
+            return apology("Invalid username. Please try again!",400)
 
-    if password == "" or password != confirm:
-        return apology("Invalid Password. Please try again!")
-    
-    db.execute('INSERT INTO users (username, hash) \
-        VALUES(?, ?)', username, generate_password_hash(password))
+        if password == "" or password != confirm:
+            return apology("Invalid Password. Please try again!",400)
+        
+        db.execute('INSERT INTO users (username, hash) \
+            VALUES(?, ?)', username, generate_password_hash(password))
 
-    rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-    # Log user in, i.e. Remember that this user has logged in
-    session["user_id"] = rows[0]["id"]
-    # Redirect user to home page
-    return redirect("/")
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        
+        # Log user in, i.e. Remember that this user has logged in
+        session["user_id"] = rows[0]["id"]
+        # Redirect user to home page
+        return redirect("/")
         
 
     

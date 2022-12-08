@@ -4,7 +4,9 @@ import urllib.parse
 
 from flask import redirect, render_template, request, session
 from functools import wraps
+# from dotenv import load_dotenv
 
+# load_dotenv()
 
 def apology(message, code=400):
     """Render message as an apology to user."""
@@ -40,7 +42,7 @@ def lookup(symbol):
 
     # Contact API
     try:
-        api_key = os.getenv("API_KEY")
+        api_key = os.environ.get("API_KEY")
         url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={api_key}"
         response = requests.get(url)
         response.raise_for_status()
