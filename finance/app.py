@@ -5,7 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 from helpers import apology, login_required, lookup, usd
 
@@ -27,8 +27,8 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
-# load_dotenv()
-if not os.environ.get("API_KEY"):
+load_dotenv()
+if not os.getenv("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
@@ -56,23 +56,27 @@ def buy():
         return render_template("buy.html")
     
     if request.method == "POST":
+        #Get data
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        
         res = lookup(symbol)
+        #Find total price of shares and round it to 2 decimal places
         
         #Result can return None. Handle it here.
         if not res:
             return apology("Invalid symbol!", 400)
         
-        #If shares is negative, thats not possible
-        if shares < 0:
+        if not shares.isdigit():
             return apology("Invalid number of shares!", 400)
 
-        
+        #If shares is negative, thats not possible
+        if int(shares) < 0:
+            return apology("Invalid number of shares!", 400)
 
-        
-
-    # return apology("TODO")
+        multiple = True if int(shares) > 1 else False
+        total = usd(res["price"] * int(shares))
+        return render_template("bought.html",shares=shares,symbol=res["symbol"],price=res["price"],total=total,multiple=multiple,name=res["name"])
 
 
 @app.route("/history")
