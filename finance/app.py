@@ -5,7 +5,6 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from dotenv import load_dotenv
 
 from helpers import apology, login_required, lookup, usd
 
@@ -27,8 +26,7 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
-load_dotenv() #load API_KEY
-if not os.environ.get("API_KEY"):
+if not os.getenv("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
@@ -113,7 +111,19 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+    if request.method == "GET":
+        return render_template("quote.html")
+    
+    #Look up symbol
+    symbol = request.form.get("symbol")
+    res = lookup(symbol)
+    
+    #Result can return None. Handle it here.
+    if not res:
+        return apology("Invalid symbol!", 400)
+    #If result found, render the template with new information
+    return render_template("quoted.html", name=res["name"],price=usd(res["price"]),symbol=res["symbol"])
+    
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -121,16 +131,29 @@ def register():
     """Register user"""
     if request.method == "GET":
         return render_template("register.html")
-    if request.method == "POST":
-        if not request.form.get("username"):
-            return apology("must provide username", 403)
+    
+    #Get username and password to enter into 
+    username = request.form.get("username")
+    password = request.form.get("password")
+    confirm = request.form.get("confirm")
 
-        # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
+    if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
+        return apology("Invalid username. Please try again!")
 
-        db.execute("INSERT username,hash INTO users WHERE username = ? AND hash = ?", request.form.get("username"),hash(request.form.get("password")))
-        return redirect("/login")
+    if password == "" or password != confirm:
+        return apology("Invalid Password. Please try again!")
+    
+    db.execute('INSERT INTO users (username, hash) \
+        VALUES(?, ?)', username, generate_password_hash(password))
+
+    rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+    # Log user in, i.e. Remember that this user has logged in
+    session["user_id"] = rows[0]["id"]
+    # Redirect user to home page
+    return redirect("/")
+        
+
+    
 
 
 @app.route("/sell", methods=["GET", "POST"])
