@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Dec  8 17:58:08 2022
+# Make data base, printed on Tue Dec 27 16:03:08 2022
 
 # Variables
 
@@ -17,85 +15,121 @@ make: *** No rule to make target 'all'.  Stop.
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
+# environment
+NVM_INC = /home/shiro/.nvm/versions/node/v18.12.0/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+PLATFORMIO_IDE = 2.5.5
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/abrar/cs50
+CURDIR := /home/shiro/cs50
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /usr/bin/sh
+_ = /mnt/c/Users/nebul/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile
 MAKEFILE_LIST := 
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-VSCODE_CWD = /mnt/d/Microsoft VS Code
+VSCODE_CWD = /mnt/c/Users/nebul/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/abrar/.vscode-server/bin/5235c6bb189b60b01b1f49062f4ffa42384f8c91/bin/remote-cli:/home/abrar/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/d/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/GtkSharp/2.12/bin:/mnt/c/ffmpeg:/mnt/c/Users/Abrar Habib/AppData/Roaming/Python/Python39/Scripts:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/d/Strawberry/c/bin:/mnt/d/Strawberry/perl/site/bin:/mnt/d/Strawberry/perl/bin:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/Abrar Habib/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Abrar Habib/AppData/Roaming/npm:/mnt/d/Microsoft VS Code/bin:/mnt/d/PyCharm Community Edition 2021.2/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/Abrar Habib/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/Abrar Habib/AppData/Local/GitHubDesktop/bin:/mnt/d/Program Files/JetBrains/CLion 2021.3.2/bin:/mnt/c/Users/Abrar Habib/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/Abrar Habib/.dotnet/tools
+NO_PROXY = 127.0.0.1
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+GOPATH = /home/shiro/go
+# environment
+NVM_BIN = /home/shiro/.nvm/versions/node/v18.12.0/bin
+# environment
+CONDA_PREFIX = /home/shiro/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-93b65b01-8440-4fcb-96c0-0d9100803764.sock
+PYENV_ROOT = /home/shiro/.pyenv
 # environment
-VSCODE_SERVER_TAR = /mnt/c/Users/ABRARH~1/AppData/Local/Temp/vscode-remote-wsl/5235c6bb189b60b01b1f49062f4ffa42384f8c91/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-eaae60f3-5a86-4c01-8cd6-621d60dbb73d.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 %F = $(notdir $%)
 # environment
-PWD = /home/abrar/cs50
+CONDA_EXE = /home/shiro/anaconda3/bin/conda
+# environment
+PWD = /home/shiro/cs50
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/13_interop
+WSL_INTEROP = /run/WSL/8_interop
+# environment
+WT_SESSION = 72b70ca5-b8a8-4dc9-b73b-b93e74f326e6
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/abrar
+HOME = /home/shiro
 # environment
-LOGNAME = abrar
+LOGNAME = shiro
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+NVM_CD_FLAGS = -q
+# environment
+ZSH = /home/shiro/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 MAKELEVEL := 0
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+PLATFORMIO_PATH = /home/shiro/.platformio/python3/bin:/home/shiro/.vscode-server/bin/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/bin/remote-cli:/home/shiro/anaconda3/condabin:/home/shiro/go/bin:/usr/local/go/bin:/home/shiro/.pyenv/shims:/home/shiro/.pyenv/bin:/home/shiro/.nvm/versions/node/v18.12.0/bin:/home/shiro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet:/mnt/c/Users/nebul/.cargo/bin:/mnt/c/Users/nebul/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nebul/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nebul/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/nebul/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Users/nebul/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/nebul/AppData/Local/atom/bin:/mnt/c/Users/nebul/AppData/Roaming/npm:/mnt/c/Users/nebul/.dotnet/tools
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+PATH = /home/shiro/.vscode-server/bin/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/bin/remote-cli:/home/shiro/anaconda3/condabin:/home/shiro/go/bin:/usr/local/go/bin:/home/shiro/.pyenv/shims:/home/shiro/.pyenv/bin:/home/shiro/.nvm/versions/node/v18.12.0/bin:/home/shiro/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet:/mnt/c/Users/nebul/.cargo/bin:/mnt/c/Users/nebul/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nebul/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nebul/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/nebul/AppData/Local/Programs/MiKTeX/miktex/bin/x64:/mnt/c/Users/nebul/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/nebul/AppData/Local/atom/bin:/mnt/c/Users/nebul/AppData/Roaming/npm:/mnt/c/Users/nebul/.dotnet/tools
+# environment
+CONDA_SHLVL = 0
+# environment
+SHLVL = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
-USER = abrar
+USER = shiro
 # makefile
 .DEFAULT_GOAL := 
 # environment
-NAME = DESKTOP-5Q81G7S
+GOROOT = /usr/local/go
+# environment
+NAME = Code
+# environment
+LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Abrar Habib/.vscode/extensions/ms-vscode-remote.remote-wsl-0.72.0
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/nebul/.vscode/extensions/ms-vscode-remote.remote-wsl-0.72.0
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/d/Microsoft VS Code
+OLDPWD = /mnt/c/Users/nebul/AppData/Local/Programs/Microsoft VS Code
 # default
 .VARIABLES := 
 # automatic
@@ -106,24 +140,36 @@ MAKEFLAGS = pqrR
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /home/shiro/.nvm
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {2c4de342-38b7-51cf-b940-2309a097f518}
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
 # environment
+PLATFORMIO_CALLER = vscode
+# environment
+PAGER = less
+# environment
 LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /home/shiro/anaconda3/bin/python
 # environment
 HOSTTYPE = x86_64
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
+# environment
+_CE_M = 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -134,8 +180,10 @@ LANG = C
 TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+_CE_CONDA = 
 # variable set hash-table stats:
-# Load=61/1024=6%, Rehash=0, Collisions=4/83=5%
+# Load=86/1024=8%, Rehash=0, Collisions=7/108=6%
 
 # Pattern-specific Variable Values
 
@@ -143,7 +191,7 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2064, inode 91323): 26 files, no impossibilities.
+# . (device 2064, inode 54755): 26 files, no impossibilities.
 
 # 26 files, no impossibilities in 1 directories.
 
@@ -201,6 +249,8 @@ GNUmakefile:
 # strcache performance: lookups = 37 / hit rate = 8%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=1/37=3%
-# Finished Make data base on Thu Dec  8 17:58:08 2022
+# Finished Make data base on Tue Dec 27 16:03:08 2022
 
  
+make: *** No rule to make target 'all'.  Stop.
+
