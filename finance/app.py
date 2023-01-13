@@ -68,6 +68,14 @@ def buy():
         if not res:
             return apology("Invalid symbol!", 400)
         
+        #If shares is negative or not a string number, thats not possible
+        if int(shares) < 0 or not shares.isdigit():
+            return apology("Invalid number of shares!", 400)
+
+        userCash = db.execute("SELECT cash FROM users WHERE username = ?", session["user_id"])
+        print(f"{userCash=}")
+        # return redirect("/")
+        
         if not shares.isdigit():
             return apology("Invalid number of shares!", 400)
 

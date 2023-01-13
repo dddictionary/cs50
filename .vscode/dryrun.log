@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/abrar/cs50'
-make: Leaving directory '/home/abrar/cs50'
+make: Entering directory '/home/shiro/cs50'
+make: Leaving directory '/home/shiro/cs50'
  
 make: *** No targets specified and no makefile found.  Stop.
 
