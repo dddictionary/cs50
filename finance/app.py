@@ -45,7 +45,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+    return render_template("portfolio.html",cash=usd(cash))
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -76,7 +77,10 @@ def buy():
 
         multiple = True if int(shares) > 1 else False
         total = usd(res["price"] * int(shares))
-        return render_template("bought.html",shares=shares,symbol=res["symbol"],price=res["price"],total=total,multiple=multiple,name=res["name"])
+        # select the ammount of cash the user has
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        return redirect("/")
+        # return render_template("bought.html",shares=shares,symbol=res["symbol"],price=res["price"],total=total,multiple=multiple,name=res["name"])
 
 
 @app.route("/history")

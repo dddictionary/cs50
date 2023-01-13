@@ -1,0 +1,41 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <!-- create a table -->
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+       <tbody>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td class="border-0 text-end">{{ cash }}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                <td class="border-0 w-bold text-end">{{ cash }}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- <h1>Bought!</h1>
+    {% if multiple %}
+        <p>You bought {{ shares }} shares of {{ name }} ({{ symbol }}) at {{ price }} each for a total of {{ total }}.</p>
+    {% else %}
+    <p>You bought {{ shares }} share of {{ name }} ({{ symbol }}) at {{ price }} each for a total of {{ total }}.</p>
+    {% endif %} -->
+{% endblock %}
